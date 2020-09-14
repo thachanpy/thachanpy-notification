@@ -23,7 +23,7 @@ type Configs struct {
 
 func GetConfigs() Configs {
 	work_dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
-	_ := godotenv.Load(path.Join(work_dir, ".env"))
+	err := godotenv.Load(path.Join(work_dir, ".env"))
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
