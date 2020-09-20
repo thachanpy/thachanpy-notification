@@ -19,7 +19,7 @@ type Info struct {
 	Cpus			string		`json:"cpus"`
 	TotalDisk		string		`json:"total_disk"`
 	UsedDisk		string		`json:"used_disk"`
-	UsedDiskPercent	string 		`json:"used_disk_percent"`
+	UsedDiskPercent		string 		`json:"used_disk_percent"`
 	Uptime 			string		`json:"uptime"`
 }
 
@@ -48,16 +48,16 @@ func GetInfo() *Info {
 	config := configs.GetConfigs()
 	diskUsedPercent, isWarning := diskThreshold(totalDisk, usedDisk, config.DiskWarning)
 	info := Info {
-		Hostname: 			os.Hostname,
-		Platform: 			os.Platform,
+		Hostname: 		os.Hostname,
+		Platform: 		os.Platform,
 		TotalMemory:		fmt.Sprintf("%dMB", vm.Total / (1024*1024)),
 		UsedMemory: 		fmt.Sprintf("%dMB", vm.Used / (1024*1024)),
-		Cpus: 				strconv.Itoa(runtime.NumCPU()),
-		TotalDisk:			fmt.Sprintf("%dGB", totalDisk / (1024*1024*1024)),
-		UsedDisk:			fmt.Sprintf("%dGB", usedDisk / (1024*1024*1024)),
+		Cpus: 			strconv.Itoa(runtime.NumCPU()),
+		TotalDisk:		fmt.Sprintf("%dGB", totalDisk / (1024*1024*1024)),
+		UsedDisk:		fmt.Sprintf("%dGB", usedDisk / (1024*1024*1024)),
 		UsedDiskPercent:	fmt.Sprintf("%.2f", diskUsedPercent) + "%",
-		Warning:			isWarning,
-		Uptime: 			unixtimeToDays(os.Uptime), 
+		Warning:		isWarning,
+		Uptime: 		unixtimeToDays(os.Uptime), 
 	}
 	return &info
 }
