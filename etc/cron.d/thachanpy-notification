@@ -1,0 +1,2 @@
+SHELL=/bin/sh
+0 6 * * * root /data/thachanpy/thachanpy-notification/thachanpy-notification
