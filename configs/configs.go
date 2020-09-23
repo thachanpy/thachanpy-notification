@@ -39,7 +39,7 @@ func GetConfigs() Configs {
 		SlackTitleLink: os.Getenv("SLACK_TITLE_LINK"),
 		SlackText: os.Getenv("SLACK_TEXT"),
 		SlackOKColor: os.Getenv("SLACK_OK_COLOR"),
-		SlackWarningColor: os.Getenv("SLACK_WARING_COLOR"),
+		SlackWarningColor: os.Getenv("SLACK_WARNING_COLOR"),
 		SlackFoooter: os.Getenv("SLACK_FOOTER"),
 	}
 	return config

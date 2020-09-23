@@ -1,13 +1,14 @@
 
 ```
-monitoring
+thachanpy-notification
 ├─ .env
 ├─ configs
 │  └─ configs.go
 ├─ info
 │  └─ info.go
-├─ main.go
-└─ slack
-   └─ slack.go
-
+├─ slack
+│  └─ slack.go
+├─ go.mod
+├─ go.sum
+└─ main.go
 ```
