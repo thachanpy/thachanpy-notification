@@ -10,12 +10,12 @@ import (
 )
 
 type Configs struct {
-	WorkDir				string
-	WebhookURL			string
-	DiskWarning			float64
-	SlackTitle 			string
+	WorkDir			string
+	WebhookURL		string
+	DiskWarning		float64
+	SlackTitle 		string
 	SlackTitleLink		string
-	SlackText  			string
+	SlackText  		string
 	SlackOKColor  		string
 	SlackWarningColor	string
 	SlackFoooter		string
